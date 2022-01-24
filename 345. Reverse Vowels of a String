@@ -1,0 +1,28 @@
+def reverseVowels(self, s: str) -> str:
+        s=list(s)
+        a=[]
+        arr=[]
+        t=0
+        x=""
+        for i in range(len(s)):
+            if s[i] in "aeiouAEIOU":
+                a.append(s[i])
+                arr.append(i)
+        a=a[::-1]
+        for i in range(len(arr)):
+            t=arr[i]
+            s[t]=a[i]
+        for i in range(len(s)):
+            x+=s[i]
+        return x
+            
+            
+        Example 1:
+
+Input: s = "hello"
+Output: "holle"
+
+Example 2:
+
+Input: s = "leetcode"
+Output: "leotcede"
